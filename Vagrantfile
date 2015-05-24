@@ -33,6 +33,8 @@ Vagrant::configure('2') do |config|
     kali.vm.box = 'kali-1.1.0-amd64'
     kali.vm.box_url = 'http://ftp.sliim-projects.eu/boxes/kali-1.1.0-amd64.box'
 
+    kali.vm.synced_folder "../", "/opt/dev/", create: true
+
     # Kali customizations
     # kali.vm.network :public_network
     # kali.vm.network :private_network, ip: "192.168.107.145"
